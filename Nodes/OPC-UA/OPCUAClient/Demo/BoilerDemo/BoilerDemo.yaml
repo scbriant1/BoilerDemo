@@ -1,0 +1,163 @@
+Name: ns=5;BoilerDemo
+Id: ns=5;s=Demo.BoilerDemo
+Type: FolderType
+ReferenceType: Organizes
+Children:
+- Name: ns=5;Boiler1
+  Id: ns=5;s=Demo.BoilerDemo.Boiler1
+  Type: BoilerType
+  ReferenceType: Organizes
+  Children:
+  - Class: Method
+    Name: ns=5;Fill
+    Id: ns=5;s=Demo.BoilerDemo.Boiler1.Fill
+    Children:
+    - Name: ns=0;InputArguments
+      Id: ns=5;i=6032
+      Type: BaseDataVariableType
+      DataType: Argument
+      ReferenceType: HasProperty
+      ValueRank: OneDimension
+      ArrayDimensions: [1]
+      Value: [{"TypeId":{"Id":296},"Body":{"Name":"SetPoint","DataType":{"Id":11},"ValueRank":-1,"ArrayDimensions":[],"Description":{"LocaleId":"","Text":"FillLevel Setpoint [l]"}}}]
+  - Name: FillLevelSensor
+    Id: ns=5;s=Demo.BoilerDemo.Boiler1.FillLevelSensor
+    Type: FillLevelSensorType
+    Children:
+    - Name: FillLevel
+      Id: ns=5;s=Demo.BoilerDemo.Boiler1.FillLevelSensor.FillLevel
+      Type: BaseDataVariableType
+      DataType: Double
+      Value: 100.0
+      Children:
+      - Name: EngineeringUnits
+        Id: ns=5;s=Demo.BoilerDemo.Boiler1.FillLevelSensor.FillLevel.EngineeringUnits
+        Type: EUInformationType
+        DataType: EUInformation
+        Value: {"TypeId":{"Id":887},"Body":{"namespaceUri":"http://www.opcfoundation.org/UA/units/un/cefact","unitId":5002322,"displayName":{"LocaleId":"en-US","Text":"l"},"description":{"LocaleId":"en-US","Text":"litre"}}}
+        Children:
+        - Name: UnitId
+          Id: g=f0deeee02f336fa1db9b714f774e0b93
+          Type: BaseVariableType
+          DataType: Int32
+          OwnerId: ns=5;s=Demo.BoilerDemo.Boiler1.FillLevelSensor.FillLevel.EngineeringUnits
+          ReferenceType: HasProperty
+          Value: 5002322
+        - Name: DisplayName
+          Id: g=b95556642d106b67d0c7bb2d614ee72c
+          Type: BaseVariableType
+          DataType: LocalizedText
+          OwnerId: ns=5;s=Demo.BoilerDemo.Boiler1.FillLevelSensor.FillLevel.EngineeringUnits
+          ReferenceType: HasProperty
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        - Name: Description
+          Id: g=b4a9f3c7f8d5ce5c0f2be1c3283ed3f5
+          Type: BaseVariableType
+          DataType: LocalizedText
+          OwnerId: ns=5;s=Demo.BoilerDemo.Boiler1.FillLevelSensor.FillLevel.EngineeringUnits
+          ReferenceType: HasProperty
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      - Name: EURange
+        Id: ns=5;s=Demo.BoilerDemo.Boiler1.FillLevelSensor.FillLevel.EURange
+        Type: RangeType
+        DataType: EURange
+        Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":0.0}}
+        Children:
+        - Name: Low
+          Id: g=72e99bfb9fcfab7662d55fbaa2b816b5
+          Type: BaseVariableType
+          DataType: Double
+          OwnerId: ns=5;s=Demo.BoilerDemo.Boiler1.FillLevelSensor.FillLevel.EURange
+          ReferenceType: HasProperty
+          Value: 0.0
+        - Name: High
+          Id: g=88e10ef1bbe09c39e5c1089725a97035
+          Type: BaseVariableType
+          DataType: Double
+          OwnerId: ns=5;s=Demo.BoilerDemo.Boiler1.FillLevelSensor.FillLevel.EURange
+          ReferenceType: HasProperty
+          Value: 0.0
+  - Name: FillLevelSetPoint
+    Id: ns=5;s=Demo.BoilerDemo.Boiler1.FillLevelSetPoint
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 100.0
+  - Class: Method
+    Name: ns=5;Heat
+    Id: ns=5;s=Demo.BoilerDemo.Boiler1.Heat
+    Children:
+    - Name: ns=0;InputArguments
+      Id: ns=5;i=6036
+      Type: BaseDataVariableType
+      DataType: Argument
+      ReferenceType: HasProperty
+      ValueRank: OneDimension
+      ArrayDimensions: [1]
+      Value: [{"TypeId":{"Id":296},"Body":{"Name":"SetPoint","DataType":{"Id":11},"ValueRank":-1,"ArrayDimensions":[],"Description":{"LocaleId":"","Text":"Temperature Setpoint [°C]"}}}]
+  - Name: HeaterStatus
+    Id: ns=5;s=Demo.BoilerDemo.Boiler1.HeaterStatus
+    Type: BaseDataVariableType
+    DataType: HeaterStatus
+    Value: 1
+  - Name: TemperatureSensor
+    Id: ns=5;s=Demo.BoilerDemo.Boiler1.TemperatureSensor
+    Type: TemperatureSensorType
+    Children:
+    - Name: Temperature
+      Id: ns=5;s=Demo.BoilerDemo.Boiler1.TemperatureSensor.Temperature
+      Type: BaseDataVariableType
+      DataType: Double
+      Value: 91.31521563754528
+      Children:
+      - Name: EngineeringUnits
+        Id: ns=5;s=Demo.BoilerDemo.Boiler1.TemperatureSensor.Temperature.EngineeringUnits
+        Type: EUInformationType
+        DataType: EUInformation
+        Value: {"TypeId":{"Id":887},"Body":{"namespaceUri":"http://www.opcfoundation.org/UA/units/un/cefact","unitId":4408652,"displayName":{"LocaleId":"en-US","Text":"°C"},"description":{"LocaleId":"en-US","Text":"degree Celsius"}}}
+        Children:
+        - Name: UnitId
+          Id: g=3c413b466484d5245da0249e31740d43
+          Type: BaseVariableType
+          DataType: Int32
+          OwnerId: ns=5;s=Demo.BoilerDemo.Boiler1.TemperatureSensor.Temperature.EngineeringUnits
+          ReferenceType: HasProperty
+          Value: 4408652
+        - Name: DisplayName
+          Id: g=1ad9c56c2c33804cd0aadffbf2cb58e8
+          Type: BaseVariableType
+          DataType: LocalizedText
+          OwnerId: ns=5;s=Demo.BoilerDemo.Boiler1.TemperatureSensor.Temperature.EngineeringUnits
+          ReferenceType: HasProperty
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        - Name: Description
+          Id: g=2e352d8bce9fd61f3061f77a4b6ae3e5
+          Type: BaseVariableType
+          DataType: LocalizedText
+          OwnerId: ns=5;s=Demo.BoilerDemo.Boiler1.TemperatureSensor.Temperature.EngineeringUnits
+          ReferenceType: HasProperty
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      - Name: EURange
+        Id: ns=5;s=Demo.BoilerDemo.Boiler1.TemperatureSensor.Temperature.EURange
+        Type: RangeType
+        DataType: EURange
+        Value: {"TypeId":{"Id":884},"Body":{"low":0.0,"high":100.0}}
+        Children:
+        - Name: Low
+          Id: g=b6480274e5934f259e0e9a0d6ae70d54
+          Type: BaseVariableType
+          DataType: Double
+          OwnerId: ns=5;s=Demo.BoilerDemo.Boiler1.TemperatureSensor.Temperature.EURange
+          ReferenceType: HasProperty
+          Value: 0.0
+        - Name: High
+          Id: g=92fd463049999f7871853f1f71dcf4fb
+          Type: BaseVariableType
+          DataType: Double
+          OwnerId: ns=5;s=Demo.BoilerDemo.Boiler1.TemperatureSensor.Temperature.EURange
+          ReferenceType: HasProperty
+          Value: 100.0
+  - Name: TemperatureSetPoint
+    Id: ns=5;s=Demo.BoilerDemo.Boiler1.TemperatureSetPoint
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 90.0

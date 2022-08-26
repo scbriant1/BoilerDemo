@@ -1,0 +1,5 @@
+Name: ns=5;Demo
+Id: ns=5;s=Demo
+Type: FolderType
+Children:
+- File: BoilerDemo/BoilerDemo.yaml
